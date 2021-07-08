@@ -1,4 +1,4 @@
-import { handleReplaceLink } from 'hooks/handleReplaceLink/handleReplaceLink'
+import { handleReplaceLink } from 'hooks/handleReplaceLink'
 import React from 'react'
 
 const LoginScreen = ({ history }) => {

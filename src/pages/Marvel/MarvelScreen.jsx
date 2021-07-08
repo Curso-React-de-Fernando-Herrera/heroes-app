@@ -2,7 +2,9 @@ import React from 'react'
 
 const MarvelScreen = () => {
   return (
-    <h1>Marvel Page</h1>
+    <>
+      <h1>Marvel Page</h1>
+    </>
   )
 }
 
