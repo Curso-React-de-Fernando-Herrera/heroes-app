@@ -1,8 +1,11 @@
-import AppRouters from 'routers/AppRouter';
+import AppRouters from 'Routers/AppRouters'
+import AuthContext from 'Context/Auth'
 
 function App() {
   return (
-    <AppRouters />
+    <AuthContext>
+      <AppRouters />
+    </AuthContext>
   );
 }
 
