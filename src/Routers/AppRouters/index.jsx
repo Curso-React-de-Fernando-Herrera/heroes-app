@@ -14,10 +14,9 @@ const AppRouters = () => {
         />
         <Route
           exact
-          path="/"
+          path="/:page?"
           component={ PagesRouters }
         />
-        <Route><h1>No encontrado</h1></Route>
       </Switch>
     </Router>
   )

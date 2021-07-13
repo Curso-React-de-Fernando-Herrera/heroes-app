@@ -5,7 +5,7 @@ export const TitleContent = styled.h1`
   margin-top: 0;
   margin-bottom: 0;
   font-family: 'poppins-semi-bold';
-  font-size: 34px;
+  font-size: 36px;
   color: blue;
   color: ${ colors.white };
 `

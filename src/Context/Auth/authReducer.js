@@ -1,10 +1,15 @@
-export const authReducer = (state, action) => {
+export const init = () => {
+  return JSON.parse(window.localStorage.getItem('authState')) || { auth: false }
+}
 
-  switch (action.type) {
+export const authReducer = (state, action) => {
+  const { type, payload } = action
+  
+  switch (type) {
     case 'login':
       return {
         ...state,
-        auth: true
+        ...payload
       }
     
     case 'logout':

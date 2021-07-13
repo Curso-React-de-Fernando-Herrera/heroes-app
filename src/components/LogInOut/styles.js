@@ -11,4 +11,10 @@ export const Button = styled.button`
   border-radius: 30px;
   margin-top: auto;
   align-self: flex-end;
+
+  :hover {
+    background-color: ${colors.white};
+    box-shadow: 0 0 4px ${colors.whiteTransparent};
+    cursor: pointer;
+  }
 `

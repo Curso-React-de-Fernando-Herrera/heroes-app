@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { useContext } from 'react'
 import { Context } from 'Context/Auth'
 import { Button } from './styles'
@@ -5,7 +7,17 @@ import { Button } from './styles'
 const LogInOut = () => {
   const { authState, dispatch } = useContext(Context)
 
-  const handleLoginOut = () => dispatch({ type: 'logout' })
+  const handleLoginOut = () => {
+    authState.auth
+      ? dispatch({ type: 'logout' })
+      : dispatch({
+        type: 'login',
+        payload: {
+          name: 'Madeval',
+          auth: true
+        }
+      })
+  }
 
   return (
     <Button onClick={ handleLoginOut }>
@@ -17,4 +29,4 @@ const LogInOut = () => {
   )
 }
 
-export default LogInOut
+export default React.memo(LogInOut)

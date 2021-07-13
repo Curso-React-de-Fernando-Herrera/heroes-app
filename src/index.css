@@ -2,10 +2,17 @@
   --white: #ffffff;
   --white-transparent: rgba(255, 255, 255, 0.6);
 
+  --gray: rgba(229, 229, 229, 1);
+
   --black: #000000;
   
   --primary: #E62429;
   --primary-transparent: rgba(230, 36, 41, 0.9);
+}
+
+@font-face {
+  font-family: 'poppins-light';
+  src: url('assets/fonts/Poppins-Light.ttf');
 }
 
 @font-face {

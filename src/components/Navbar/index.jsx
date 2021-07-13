@@ -1,4 +1,5 @@
-import Title from 'Components/Title'
+import React from 'react'
+import Title from 'Components/TitlePage'
 import NavbarOptions from 'Components/NavbarOptions'
 import LogInOut from 'Components/LogInOut'
 
@@ -14,4 +15,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default React.memo(Navbar)

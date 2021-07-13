@@ -13,7 +13,13 @@ export const NavLinks = styled.nav`
 export const Link = styled(LinkStyled)`
   font-size: 24px;
   text-decoration: none;
-  color: ${ ({ active }) => 
-    active ? colors.white : colors.whiteTransparent
+
+  color: ${ ({ href, actualurl }) =>
+    href === actualurl ? colors.white : colors.whiteTransparent
   };
+
+  &:hover {
+    color: ${colors.white};
+    text-shadow: 0px 0px 4px ${colors.whiteTransparent};
+  }
 `
