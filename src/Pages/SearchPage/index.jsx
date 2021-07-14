@@ -1,8 +1,44 @@
-import React from 'react'
+import { useState } from 'react'
+import { useLocation } from 'wouter'
 
-const SearchPage = () => {
+import TopTitle from 'Components/TopTitle'
+import ListOfHeroes from 'Components/ListOfHeroes'
+
+import { SearchBar } from './styles'
+
+const SearchPage = ({ params }) => {
+  const { nameHero } = params
+
+  const [hero, setHero] = useState("")
+  const [, setLocation] = useLocation()
+
+  const handleSearchHero = e =>   {
+    e.preventDefault()
+    setLocation(`/search/${hero}`)
+  }
+
   return (
-    <h1>Search page</h1>
+    <>
+    <TopTitle body="Buscador" />
+    <form onSubmit={ handleSearchHero }>
+      <SearchBar
+        autoComplete="off"
+        placeholder="Busca tu super heroe aqui"
+        type="text"
+        value={hero} onChange={
+          (e) => setHero( e.target.value )
+        }
+      />
+    </form>
+    <section>
+      {
+        typeof nameHero === 'undefined'
+          ? null
+          : <ListOfHeroes name={nameHero} />
+      }
+      
+    </section>
+    </>
   )
 }
 

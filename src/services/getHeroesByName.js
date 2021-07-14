@@ -1,5 +1,5 @@
 import { heroes } from "data/heroes"
 
-export const getHeroesById = (name) => {
-  return heroes.filter(({ superhero }) => name === superhero)
+export const getHeroesByName = (name) => {
+  return heroes.filter(({ superhero }) => decodeURI(name).trim() === superhero.toLowerCase().trim())
 }

@@ -1,9 +1,9 @@
 import { Router, Switch, Route, Redirect } from 'wouter'
 
-import HomePage from 'Pages/HomePage'
 import Navbar from 'Components/Navbar'
 
 import MarvelPage from 'Pages/Marvel'
+import SingleHeroPage from 'Pages/SingleHeroPage'
 import DCPage from 'Pages/DCPage'
 import SearchPage from 'Pages/SearchPage'
 
@@ -19,6 +19,11 @@ const PagesRouters = () => {
           <Switch>
             <Route
               exact
+              path="/hero/:hero"
+              component={ SingleHeroPage }
+            />
+            <Route
+              exact
               path="/marvel"
               component={ MarvelPage }
             />
@@ -29,15 +34,10 @@ const PagesRouters = () => {
             />
             <Route
               exact
-              path="/search"
+              path="/search/:nameHero?"
               component={ SearchPage }
             />
-            <Route
-              exact
-              path="/"
-              component={ HomePage }
-            />
-            <Redirect to="/"/>
+            <Redirect to="/marvel"/>
           </Switch>
         </ContainerPage>
       

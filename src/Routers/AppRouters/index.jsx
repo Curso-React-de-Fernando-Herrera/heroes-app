@@ -1,4 +1,4 @@
-import { Route, Router, Switch } from 'wouter'
+import { Route, Router, Switch, Redirect } from 'wouter'
 
 import LoginPage from 'Pages/LoginPage'
 import PagesRouters from 'Routers/PagesRouters'
@@ -14,9 +14,10 @@ const AppRouters = () => {
         />
         <Route
           exact
-          path="/:page?"
+          path="/:page/:hero?"
           component={ PagesRouters }
         />
+        <Redirect to="/marvel"/>
       </Switch>
     </Router>
   )

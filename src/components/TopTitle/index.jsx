@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 import { Title } from './styles'
 
-const TopTitle = ({ title }) => {
+const TopTitle = ({ title = "", body = "Heroes de" }) => {
   return (
-    <Title>Heroes de { title }</Title>
+    <Title>{ body } { title }</Title>
   )
 }
 
